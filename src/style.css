@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #8b5cf6;
+  --primary-light: #c4b5fd;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-900: #111827;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--gray-50);
+  min-height: 100vh;
+}
+
+/*
+
+Credate By: Fauzialifatah
+Follow me: https://whatsapp.com/channel/0029VawsCnQ9mrGkOuburC1z
+Youtube: https://www.youtube.com/@Fauzialifatah
+
+
+*/
+.navbar {
+  position: fixed;
+  width: 100%;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.logo-icon {
+  color: #eab308;
+  width: 2rem;
+  height: 2rem;
+}
+
+.desktop-menu {
+  display: none;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .desktop-menu {
+    display: flex;
+  }
+  
+  .mobile-menu-button {
+    display: none;
+  }
+}
+
+.desktop-menu a {
+  color: var(--gray-600);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.desktop-menu a:hover {
+  color: var(--gray-900);
+}
+
+.mobile-menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-menu {
+  padding: 0.5rem;
+  background: white;
+}
+
+.mobile-menu.hidden {
+  display: none;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--gray-600);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/*
+
+Credate By: Fauzialifatah
+Follow me: https://whatsapp.com/channel/0029VawsCnQ9mrGkOuburC1z
+Youtube: https://www.youtube.com/@Fauzialifatah
+Download Css/Js: https://www.mediafire.com/file/53xi4i6x4u5uaiv/html+portofolio.zip/file
+*/
+.hero {
+  padding: 8rem 1rem 4rem;
+  background: linear-gradient(to right, #f3e8ff, #fae8ff);
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+}
+
+.hero .highlight {
+  display: block;
+  color: var(--primary);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--gray-600);
+  margin-top: 1rem;
+}
+
+/*
+
+Credate By: Fauzialifatah
+Follow me: https://whatsapp.com/channel/0029VawsCnQ9mrGkOuburC1z
+Youtube: https://www.youtube.com/@Fauzialifatah
+Download Css/Js: https://www.mediafire.com/file/53xi4i6x4u5uaiv/html+portofolio.zip/file
+*/
+.skills {
+  padding: 4rem 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.skill-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+.skill-icon {
+  display: inline-flex;
+  padding: 0.5rem;
+  background: #f3e8ff;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill-icon i {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary);
+}
+
+.skill-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+  color: var(--gray-500);
+}
+
+/* Project Section */
+#projects {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.project-card {
+  display: inline-block;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.project-link:hover {
+  background: var(--primary-light);
+}
+
