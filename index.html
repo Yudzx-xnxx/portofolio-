@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yudzx - Portfolio</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <i data-lucide="zap" class="logo-icon"></i>
+        <span>YT: Yudzx</span>
+      </div>
+      
+      <div class="desktop-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <button class="mobile-menu-button">
+        <i data-lucide="menu" class="menu-icon"></i>
+      </button>
+    </div>
+
+    <div class="mobile-menu hidden">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>
+        <span>I'm</span>
+        <span class="highlight">Yudzx</span>
+      </h1>
+      <p>Stack Developer</p>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills & Keahlian</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i data-lucide="code"></i>
+        </div>
+        <h3>Frontend Development</h3>
+        <p>HTML, CSS, JavaScript</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i data-lucide="database"></i>
+        </div>
+        <h3>Backend Development</h3>
+        <p>Node.js, Python, Java</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i data-lucide="globe"></i>
+        </div>
+        <h3>Web Technologies</h3>
+        <p>HTML5, CSS3, JavaScript</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i data-lucide="terminal"></i>
+        </div>
+        <h3>DevOps</h3>
+        <p>Docker, AWS, CI/CD</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i data-lucide="palette"></i>
+        </div>
+        <h3>UI/UX Design</h3>
+        <p>Figma, Adobe XD</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i data-lucide="coffee"></i>
+        </div>
+        <h3>Other Skills</h3>
+        <p>Git, Agile, Testing</p>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
