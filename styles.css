@@ -1,4 +1,4 @@
-/* Import Font */
+/* Import font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 * {
@@ -9,176 +9,186 @@
 }
 
 body {
-    background-color: #111;
+    background-color: #0a0a0a;
     color: white;
+    text-align: center;
 }
 
-/* Navbar */
-.navbar {
+/* Header */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background: #222;
+    padding: 15px 20px;
+    background: #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Menu */
 .menu-toggle {
     font-size: 24px;
     cursor: pointer;
 }
 
-#nav-menu {
+.nav-menu {
     display: none;
     position: absolute;
     top: 60px;
     right: 20px;
-    background: #222;
+    background: #111;
     padding: 10px;
     border-radius: 5px;
 }
 
-#nav-menu a {
+.nav-menu a {
     display: block;
+    padding: 10px;
     color: white;
     text-decoration: none;
-    padding: 10px;
 }
 
-/* Home Section */
+.nav-menu a:hover {
+    color: #9b51e0;
+}
+
+.show-menu {
+    display: block;
+}
+
+/* Home */
 .home {
-    text-align: center;
-    padding: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .home h1 {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 700;
+    color: #9b51e0;
+}
+
+.home h2 {
+    font-size: 24px;
+    font-weight: 400;
     color: white;
 }
 
 .home p {
-    font-size: 18px;
-    color: #bbb;
-}
-
-.profile-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    max-width: 600px;
+    font-size: 16px;
     margin-top: 10px;
+    opacity: 0.8;
 }
 
 /* Social Icons */
 .social-icons {
+    display: flex;
+    gap: 15px;
     margin-top: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #111;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #9b51e0;
 }
 
 .social-icons img {
-    width: 40px;
-    margin: 0 10px;
+    width: 24px;
+    height: 24px;
 }
 
-/* About Section */
-.about {
-    text-align: center;
-    padding: 50px;
-}
-
-.about h1 {
-    font-size: 28px;
-    font-weight: normal; /* Biar nggak bold kecuali yang di span */
-    color: white;
-}
-
-.about .bold-text {
-    font-weight: bold; /* Bold hanya untuk Developer Without Teacher */
-}
-
-/* Skills Section */
-.skills {
-    text-align: center;
-    padding: 50px;
-}
-
-.skills h2 {
-    font-size: 28px;
-    font-weight: bold;
-    color: white;
-}
-
-.skills .skill-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.skill-list img {
-    width: 50px;
-    margin: 10px;
-}
-
-/* Chat AI Section */
-.chat-ai {
-    text-align: center;
-    padding: 50px;
-}
-
-.chat-box {
-    background: #222;
+/* Chat AI */
+.chat-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #111;
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
-    margin: auto;
+}
+
+.chat-messages {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-bottom: 10px;
 }
 
 .chat-message {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+.chat-message.user {
+    background: #9b51e0;
+    align-self: flex-end;
+}
+
+.chat-message.ai {
     background: #333;
-    color: white;
+    align-self: flex-start;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.chat-input input {
+    flex: 1;
     padding: 10px;
-    border-radius: 10px;
-    margin: 10px 0;
-}
-
-.user-message {
-    text-align: right;
-}
-
-.bot-message {
-    text-align: left;
-}
-
-/* TikTok Downloader */
-.tiktok-downloader {
-    text-align: center;
-    padding: 50px;
-}
-
-.tiktok-box {
+    border: none;
+    border-radius: 5px;
     background: #222;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    margin: auto;
-}
-
-.tiktok-box input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-.tiktok-box button {
-    background: #7209b7;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
 }
 
-.tiktok-box button:hover {
-    background: #5a08a1;
+.chat-input button {
+    padding: 10px;
+    border: none;
+    background: #9b51e0;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home, .chat-container {
+    animation: fadeIn 0.5s ease-in-out;
 }
