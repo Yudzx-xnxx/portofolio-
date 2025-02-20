@@ -1,7 +1,6 @@
 /* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,178 +9,89 @@
 }
 
 body {
-    background-color: #181818;
+    background-color: #111;
     color: white;
 }
 
-/* Navigation */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    background: black;
+    padding: 20px;
+    background: #222;
 }
 
-.navbar .menu-toggle {
+.menu-toggle {
     font-size: 24px;
     cursor: pointer;
 }
 
-.nav-menu {
+#nav-menu {
     display: none;
     position: absolute;
-    right: 20px;
     top: 60px;
+    right: 20px;
     background: #222;
-    border-radius: 5px;
     padding: 10px;
+    border-radius: 5px;
 }
 
-.nav-menu a {
+#nav-menu a {
     display: block;
     color: white;
-    padding: 10px;
     text-decoration: none;
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.hero h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #c85aff;
-}
-
-.hero p {
-    font-size: 18px;
-    color: #ccc;
-}
-
-/* Social Icons */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    margin: 0 10px;
-}
-
-.social-icons img {
-    width: 40px;
-    height: 40px;
-}
-
-/* Chat AI */
-.chat-container {
-    width: 100%;
-    max-width: 450px;
-    background: #181818;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 50px auto;
-}
-
-.chat-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #333;
-}
-
-.chat-messages {
-    height: 300px;
-    overflow-y: auto;
     padding: 10px;
-    background: #222;
-    border-radius: 5px;
-    color: white;
 }
 
-.chat-bubble {
-    max-width: 80%;
-    padding: 10px 15px;
-    border-radius: 15px;
-    margin-bottom: 10px;
-}
-
-.user-message {
-    background: #c85aff;
-    align-self: flex-end;
-}
-
-.bot-message {
-    background: #333;
-    align-self: flex-start;
-}
-
-.chat-input-container {
-    display: flex;
-    margin-top: 10px;
-}
-
-.chat-input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-.send-button {
-    padding: 10px;
-    border: none;
-    background: #c85aff;
-    color: white;
-    cursor: pointer;
-}
-
-/* TikTok Downloader */
-.tiktok-container {
+/* Home Section */
+.home {
     text-align: center;
     padding: 50px;
 }
 
-.tiktok-container input {
-    width: 80%;
-    padding: 10px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
+.home h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
 }
 
-.tiktok-container button {
-    padding: 10px;
-    background: #c85aff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+.home p {
+    font-size: 18px;
+    color: #bbb;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 0 10px;
 }
 
 /* About Section */
 .about {
-    padding: 50px 20px;
+    text-align: center;
+    padding: 50px;
 }
 
-.about h2 {
+.about h1 {
     font-size: 28px;
-    font-weight: bold;
-    color: #c85aff;
+    font-weight: normal; /* Biar nggak bold kecuali yang di span */
+    color: white;
 }
 
-.about p {
-    font-size: 18px;
-    color: #ccc;
+.about .bold-text {
+    font-weight: bold; /* Bold hanya untuk Developer Without Teacher */
 }
 
 /* Skills Section */
@@ -193,17 +103,82 @@ body {
 .skills h2 {
     font-size: 28px;
     font-weight: bold;
-    color: #c85aff;
+    color: white;
 }
 
-.skills .skill-icons {
+.skills .skill-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    margin-top: 20px;
 }
 
-.skills .skill-icons img {
-    width: 60px;
-    height: 60px;
-    }
+.skill-list img {
+    width: 50px;
+    margin: 10px;
+}
+
+/* Chat AI Section */
+.chat-ai {
+    text-align: center;
+    padding: 50px;
+}
+
+.chat-box {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.chat-message {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.user-message {
+    text-align: right;
+}
+
+.bot-message {
+    text-align: left;
+}
+
+/* TikTok Downloader */
+.tiktok-downloader {
+    text-align: center;
+    padding: 50px;
+}
+
+.tiktok-box {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.tiktok-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.tiktok-box button {
+    background: #7209b7;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.tiktok-box button:hover {
+    background: #5a08a1;
+}
