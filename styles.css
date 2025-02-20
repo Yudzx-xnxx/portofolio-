@@ -1,134 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-}
+/* General Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
-    background: #0a0a0a;
+    background: #0d0d0d;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
-/* Navbar */
+/* Header */
 header {
-    background: #000;
-    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
+    background: black;
+    padding: 10px 20px;
 }
 
-.logo {
-    font-size: 20px;
-    font-weight: 700;
-    color: #b22eff;
+header h1 {
+    font-size: 24px;
+    color: #a239ca;
 }
 
 .menu-toggle {
     font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
     cursor: pointer;
+    color: white;
 }
 
-/* Hero Section */
-.hero {
-    padding: 120px 20px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.profile-container {
-    position: relative;
-    display: inline-block;
-}
-
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #b22eff;
-}
-
-.floating-icons {
+/* Navigation */
+#nav-menu {
+    display: none;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.floating-icons .icon {
-    width: 40px;
-    height: 40px;
-    background: rgba(178, 46, 255, 0.2);
+    top: 50px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
     padding: 10px;
-    border-radius: 10px;
 }
 
-/* Text Styling */
-.title {
-    font-size: 30px;
-    font-weight: 700;
+#nav-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#nav-menu ul li {
+    padding: 10px;
+}
+
+#nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Intro */
+.intro img {
+    width: 120px;
+    border-radius: 50%;
     margin-top: 20px;
 }
 
-.title span {
-    color: #b22eff;
+h2 {
+    font-size: 18px;
+    margin: 10px;
 }
 
 .subtitle {
-    font-size: 20px;
-    font-weight: 400;
-    color: #bbb;
-}
-
-.description {
-    font-size: 14px;
-    max-width: 80%;
-    margin-top: 10px;
+    font-size: 16px;
+    color: #a239ca;
 }
 
 /* Social Icons */
 .social-icons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
     margin-top: 20px;
 }
 
-.social-icons a {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 12px;
-    border-radius: 10px;
-}
-
 .social-icons img {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    margin: 0 10px;
 }
 
-/* Animasi */
+/* Animasi Slide-Up */
 @keyframes slideUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -136,129 +94,108 @@ header {
     }
 }
 
-.hero, .social-icons {
-    animation: slideUp 0.6s ease-in-out;
+.intro, .social-icons {
+    animation: slideUp 0.8s ease-out;
 }
 
-/* Chat AI, Skills, About, TikTok Downloader */
-.section {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.section h2 {
-    font-size: 28px;
-    color: #b22eff;
-    margin-bottom: 15px;
-}
-
-.section p {
-    font-size: 16px;
-    color: #bbb;
-    max-width: 80%;
-    margin: auto;
-}
-
-/* Chat AI */
+/* ========== Chat AI (Shiina) ========== */
 .chat-container {
-    background: #111;
-    padding: 20px;
-    border-radius: 10px;
     width: 90%;
     max-width: 600px;
-    margin: auto;
+    margin: 20px auto;
+    background: black;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .chat-box {
-    background: #222;
-    padding: 10px;
-    border-radius: 10px;
     height: 400px;
-    overflow-y: auto;
-}
-
-.chat-input {
-    margin-top: 10px;
-    display: flex;
-}
-
-.chat-input input {
-    flex: 1;
+    overflow-y: scroll;
+    border: 1px solid #a239ca;
     padding: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-.chat-input button {
-    background: #b22eff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin-left: 5px;
-    cursor: pointer;
-}
-
-/* Skills */
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.skill-box {
-    background: #222;
-    padding: 15px;
+    background: #1a1a1a;
     border-radius: 10px;
+}
+
+.chat-message {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.user-message {
+    background: #a239ca;
+    color: white;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background: #333;
+    color: white;
+    align-self: flex-start;
+}
+
+/* ========== About Section ========== */
+.about-section {
+    padding: 20px;
+    background: black;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.about-section h2 {
+    color: #a239ca;
+}
+
+/* ========== Skills Section ========== */
+.skills-section {
+    padding: 20px;
+    background: black;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.skill-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.skill-box img {
-    width: 40px;
-    height: 40px;
-}
-
-/* About */
-.about-content {
-    max-width: 600px;
-    margin: auto;
-}
-
-.about-section {
-    margin-bottom: 20px;
-}
-
-/* TikTok Downloader */
-.tiktok-container {
-    background: #111;
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 600px;
-    margin: auto;
-}
-
-.tiktok-input {
-    display: flex;
-    gap: 10px;
     margin-bottom: 15px;
 }
 
-.tiktok-input input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+.skill-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
 
-.tiktok-input button {
-    background: #b22eff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
+/* ========== TikTok Downloader ========== */
+.tiktok-section {
+    padding: 20px;
+    background: black;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.input-url {
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #a239ca;
     border-radius: 5px;
+    background: #1a1a1a;
+    color: white;
+}
+
+.download-btn {
+    padding: 10px 20px;
+    background: #a239ca;
+    border: none;
+    border-radius: 5px;
+    color: white;
     cursor: pointer;
+    font-size: 16px;
+}
+
+.download-btn:hover {
+    background: #8229a3;
     }
