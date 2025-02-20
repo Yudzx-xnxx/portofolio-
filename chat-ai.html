@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat AI - Yudzx Dev</title>
+    <title>Shiina AI</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <h1>Chat AI (Shiina)</h1>
-    </header>
-
-    <section class="chat-ai">
-        <div id="chat-box"></div>
-        <input type="text" id="user-input" placeholder="Tanyakan sesuatu...">
-        <button onclick="sendMessage()">Kirim</button>
-    </section>
-
+<body class="dark-mode">
+    <div class="chat-container">
+        <div class="chat-header">
+            <button class="menu-btn">☰</button>
+            <h2>Shiina</h2>
+            <button class="delete-btn">🗑️</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Pesan akan ditampilkan di sini -->
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Message Shiina...">
+            <button id="send-btn">➕</button>
+        </div>
+    </div>
     <script src="chat-ai.js"></script>
 </body>
 </html>
