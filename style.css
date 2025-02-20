@@ -1,0 +1,138 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.section-title {
+    color: #ffcc00;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Animasi Slide-Up */
+.slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skills, .chat-ai, .tiktok-downloader {
+    margin-top: 30px;
+}
+
+.skill h3 {
+    font-size: 16px;
+    color: #ffcc00;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #ffcc00;
+    color: white;
+    font-size: 12px;
+    text-align: right;
+    line-height: 8px;
+    padding-right: 5px;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/* Chat AI */
+.chat-container {
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.chat-box {
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.message {
+    background: #333;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    max-width: 80%;
+}
+
+.bot {
+    background: #ffcc00;
+    color: #fff;
+}
+
+.user {
+    background: #444;
+    color: #fff;
+    text-align: right;
+    float: right;
+}
+
+input, button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    margin-top: 5px;
+}
+
+/* Button Merah */
+button {
+    background: #ff0000;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #cc0000;
+}
+
+/* TikTok Downloader */
+.tiktok-downloader {
+    margin-top: 50px;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 8px;
+}
+
+.tiktok-downloader input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.download-links {
+    margin-top: 10px;
+}
