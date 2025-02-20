@@ -1,33 +1,86 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #121212;
-    color: white;
 }
 
-h1, h2 {
-    color: #ff69b4;
+body {
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    border-bottom: 2px solid #ff4da6;
+}
+
+h1 {
+    font-size: 24px;
+    color: #ff4da6;
+}
+
+#menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+nav {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 0;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff4da6;
+}
+
+.profile {
+    margin-top: 50px;
 }
 
 .profile-pic {
-    width: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    border: 3px solid #ff4da6;
 }
 
-.social-icons img {
-    width: 30px;
-    margin: 5px;
+.social-icons {
+    margin-top: 20px;
 }
 
-.card {
-    background: #222;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 10px;
+.social-icons a img {
+    width: 40px;
+    margin: 0 10px;
+    transition: 0.3s;
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+.social-icons a img:hover {
+    transform: scale(1.2);
 }
