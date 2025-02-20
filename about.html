@@ -8,30 +8,67 @@
 </head>
 <body>
     <header>
-        <h1>About Me</h1>
+        <div class="navbar">
+            <h1 class="logo">YUDZX DEV</h1>
+            <a href="index.html" class="home-icon">🏠</a>
+        </div>
     </header>
 
-    <section class="about">
-        <div class="card">
-            <p>I'm a passionate Full Stack Developer with expertise in building modern web applications. With 5+ years of experience, I focus on creating efficient, scalable, and user-friendly solutions.</p>
-        </div>
+    <main>
+        <section class="about">
+            <h2 class="section-title">About Me</h2>
+            <p class="intro">
+                I'm a passionate Full Stack Developer with expertise in building modern web applications.
+                With experience in software development, I focus on creating efficient, scalable, 
+                and user-friendly solutions that solve real-world problems.
+            </p>
 
-        <h2>Professional Journey</h2>
-        <div class="card">
-            <h3>Work Experience</h3>
-            <p><strong>Senior Full Stack Developer</strong> - Tech Company Inc. | 2020 - Present</p>
-            <p>Leading development of enterprise web applications and mentoring junior developers.</p>
-            <p><strong>Full Stack Developer</strong> - Digital Solutions Ltd. | 2018 - 2020</p>
-            <p>Developed and maintained multiple client projects using modern web technologies.</p>
-        </div>
+            <h3 class="sub-title">Professional Journey</h3>
+            <div class="journey-container">
+                <div class="journey-box">
+                    <h4>Work Experience</h4>
+                    <p><strong>Full Stack Developer</strong><br>
+                    Freelance | 2022 - Present</p>
+                    <p>Developed various projects including AI-based chatbots, 
+                    web applications, and automation tools.</p>
+                </div>
+                <div class="journey-box">
+                    <h4>Education</h4>
+                    <p><strong>Self-Taught Developer</strong><br>
+                    Started coding in middle school, learning through curiosity and practice.</p>
+                    <p>Focused on web technologies, backend development, and UI/UX design.</p>
+                </div>
+            </div>
 
-        <h2>What I Do</h2>
-        <div class="skills-grid">
-            <div class="card">Frontend Development</div>
-            <div class="card">Backend Development</div>
-            <div class="card">Mobile Development</div>
-            <div class="card">Database Design</div>
-        </div>
-    </section>
+            <h3 class="sub-title">What I Do</h3>
+            <div class="skills-container">
+                <div class="skill-box">
+                    <h4>Frontend Development</h4>
+                    <p>Building responsive and interactive user interfaces using modern frameworks like React, Vue, and Svelte.</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Backend Development</h4>
+                    <p>Developing robust server-side applications using Node.js, Express, and other modern technologies.</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Mobile Development</h4>
+                    <p>Creating cross-platform mobile applications using React Native and Flutter.</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Database Design</h4>
+                    <p>Designing and implementing efficient database structures using MongoDB, PostgreSQL, and MySQL.</p>
+                </div>
+            </div>
+
+            <h3 class="sub-title">Beyond Coding</h3>
+            <p class="beyond-text">
+                When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
+                or sharing knowledge through technical blog posts. I'm also passionate about mentoring aspiring developers 
+                and building a supportive tech community.
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
