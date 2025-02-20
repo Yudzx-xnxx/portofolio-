@@ -1,86 +1,204 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #121212;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    background-color: #0d0d0d;
+    color: #fff;
+    overflow-x: hidden;
 }
 
+/* Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header & Navigation */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #1e1e1e;
-    border-bottom: 2px solid #ff4da6;
+    padding: 20px;
+    background: #181818;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.8s ease-in-out;
 }
 
-h1 {
+.logo {
     font-size: 24px;
-    color: #ff4da6;
+    font-weight: 600;
+    color: #b300ff;
 }
 
-#menu-toggle {
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-nav {
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    background: #1e1e1e;
-    padding: 10px;
-    border-radius: 5px;
+.nav-links {
+    list-style: none;
     display: flex;
-    flex-direction: column;
 }
 
-.hidden {
-    display: none;
+.nav-links li {
+    margin-left: 20px;
 }
 
-nav a {
+.nav-links a {
     text-decoration: none;
-    color: white;
-    padding: 8px 0;
+    color: #fff;
     transition: 0.3s;
 }
 
-nav a:hover {
-    color: #ff4da6;
+.nav-links a:hover {
+    color: #b300ff;
 }
 
-.profile {
-    margin-top: 50px;
+/* Home Page */
+.home-container {
+    text-align: center;
+    padding: 50px 20px;
+    animation: slideUp 1s ease-in-out;
 }
 
 .profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 3px solid #ff4da6;
+    border: 3px solid #b300ff;
+    margin-bottom: 20px;
 }
 
-.social-icons {
-    margin-top: 20px;
+.intro-text {
+    font-size: 20px;
+    color: #ccc;
 }
 
-.social-icons a img {
-    width: 40px;
-    margin: 0 10px;
-    transition: 0.3s;
+/* About Page */
+.about-container {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    animation: slideUp 1s ease-in-out;
 }
 
-.social-icons a img:hover {
-    transform: scale(1.2);
+.about-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #b300ff;
+    margin-bottom: 10px;
+}
+
+.about-text {
+    font-size: 18px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Skills Page */
+.skills-container {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    animation: slideUp 1s ease-in-out;
+}
+
+.skill-box {
+    background: #181818;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.skill-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #b300ff;
+}
+
+.progress-bar {
+    height: 10px;
+    width: 100%;
+    background: #333;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #b300ff;
+    width: 80%; /* Ganti sesuai kebutuhan */
+}
+
+/* Chat AI Page */
+.chat-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 50px 20px;
+    text-align: center;
+    animation: slideUp 1s ease-in-out;
+}
+
+.chat-box {
+    background: #181818;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.chat-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.send-btn {
+    padding: 10px 20px;
+    background: #b300ff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.send-btn:hover {
+    background: #8a00cc;
+}
+
+/* Chat Bubble */
+.user-message, .bot-message {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: inline-block;
+    max-width: 80%;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+.user-message {
+    background: #b300ff;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background: #333;
+    align-self: flex-start;
 }
