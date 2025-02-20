@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #121212;
+    color: white;
+}
+
+h1, h2 {
+    color: #ff69b4;
+}
+
+.profile-pic {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 5px;
+}
+
+.card {
+    background: #222;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
