@@ -1,3 +1,3 @@
-document.getElementById("menu-btn").addEventListener("click", function() {
-    document.getElementById("menu").classList.toggle("hidden");
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.getElementById('menu').classList.toggle('hidden');
 });
