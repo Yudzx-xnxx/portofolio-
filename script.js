@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Toggle Menu Titik Tiga
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navMenu = document.getElementById("nav-menu");
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
 
-    menuToggle.addEventListener("click", function () {
-        navMenu.style.display = navMenu.style.display === "block" ? "none" : "block";
+    menuBtn.addEventListener("click", function () {
+        menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
     });
 });
