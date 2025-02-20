@@ -28,12 +28,12 @@ body {
     }
 }
 
-/* Header & Navigation */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px 20px;
     background: #181818;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     animation: slideUp 0.8s ease-in-out;
@@ -45,33 +45,14 @@ header {
     color: #b300ff;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #fff;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #b300ff;
-}
-
 /* Home Page */
-.home-container {
+.hero {
     text-align: center;
     padding: 50px 20px;
     animation: slideUp 1s ease-in-out;
 }
 
-.profile-pic {
+.profile-img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -79,9 +60,52 @@ header {
     margin-bottom: 20px;
 }
 
-.intro-text {
+/* Floating Social Icons */
+.floating-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.floating-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #181818;
+    transition: 0.3s;
+}
+
+.floating-icons a:hover {
+    background: #b300ff;
+}
+
+.floating-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Text Styles */
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #b300ff;
+    margin-top: 10px;
+}
+
+.subtitle {
     font-size: 20px;
     color: #ccc;
+}
+
+.description {
+    font-size: 16px;
+    color: #bbb;
+    line-height: 1.6;
+    margin-top: 10px;
 }
 
 /* About Page */
@@ -201,4 +225,35 @@ header {
 .bot-message {
     background: #333;
     align-self: flex-start;
+}
+
+/* TikTok Downloader */
+.tiktok-container {
+    padding: 50px 20px;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    animation: slideUp 1s ease-in-out;
+}
+
+.tiktok-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.download-btn {
+    padding: 10px 20px;
+    background: #b300ff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.download-btn:hover {
+    background: #8a00cc;
 }
