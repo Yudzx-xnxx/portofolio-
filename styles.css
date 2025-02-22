@@ -1,7 +1,5 @@
-/* Import Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,265 +8,233 @@
     scroll-behavior: smooth;
 }
 
-/* Body */
 body {
     background-color: #0d0d0d;
-    color: #fff;
+    color: white;
     text-align: center;
-    overflow-x: hidden;
 }
 
-/* Header */
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #111;
-    padding: 15px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    padding: 20px;
+    background-color: black;
 }
 
-header h1 {
-    font-size: 1.5em;
+h1 {
+    font-size: 24px;
     font-weight: bold;
 }
 
 #menu-toggle {
-    font-size: 1.8em;
+    font-size: 24px;
     cursor: pointer;
 }
 
-/* Navigation */
+/* NAVIGATION */
 nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 250px;
-    height: 100vh;
-    background: #111;
-    transition: right 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
 }
 
 nav ul li {
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-size: 1.2em;
-    display: block;
-    padding: 10px;
+    font-size: 18px;
 }
 
-nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* Hero Section */
+/* HERO SECTION */
 .hero {
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 50px 20px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 3px solid #7d2ae8;
-    margin-bottom: 15px;
+    border: 4px solid purple;
+    animation: slideUp 1s ease-in-out;
 }
 
-.hero h2 {
-    font-size: 2.5em;
-    font-weight: bold;
-    background: linear-gradient(90deg, #7d2ae8, #ff2ae8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+h2 {
+    font-size: 32px;
+    color: #a14cff;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.hero p {
-    font-size: 1.1em;
-    margin: 10px auto;
-    max-width: 500px;
-    opacity: 0.8;
+p {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 10px 0;
+    animation: fadeIn 2.5s ease-in-out;
 }
 
-/* Social Icons */
+/* SOCIAL ICONS */
 .social-icons {
-    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    animation: fadeIn 3s ease-in-out;
 }
 
-.social-icons a {
-    margin: 0 10px;
-}
-
-.social-icons img {
+.social-icons a img {
     width: 40px;
     height: 40px;
-    padding: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s;
 }
 
-.social-icons img:hover {
-    transform: scale(1.1);
+.social-icons a img:hover {
+    transform: scale(1.2);
 }
 
-/* About Page */
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ABOUT PAGE */
 .about-container {
-    max-width: 800px;
-    margin: 100px auto 50px;
-    padding: 20px;
-    text-align: left;
+    padding: 50px 20px;
 }
 
 .about-container h2 {
-    font-size: 2em;
-    color: #7d2ae8;
-    margin-bottom: 15px;
+    font-size: 28px;
+    color: #a14cff;
 }
 
 .about-container p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    opacity: 0.8;
+    font-size: 16px;
+    max-width: 700px;
+    margin: 20px auto;
 }
 
-/* Skills Page */
+/* SKILLS PAGE */
 .skills-container {
-    max-width: 900px;
-    margin: 100px auto;
-    padding: 20px;
+    padding: 50px 20px;
 }
 
-.skills-grid {
+.skills-container h2 {
+    font-size: 28px;
+    color: #a14cff;
+}
+
+.skills-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.skill {
-    width: 120px;
-    text-align: center;
-    margin: 10px;
+.skills-list img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
 }
 
-.skill img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
+.skills-list img:hover {
+    transform: scale(1.2);
 }
 
-/* Chat AI */
+/* CHAT AI PAGE */
 .chat-container {
     max-width: 600px;
-    margin: 100px auto;
+    margin: 50px auto;
     padding: 20px;
-    background: #222;
+    background: #1a1a1a;
     border-radius: 10px;
 }
 
-.chat-messages {
-    height: 300px;
+.chat-box {
+    height: 400px;
     overflow-y: auto;
     padding: 10px;
+    border-radius: 5px;
+    background: black;
 }
 
 .input-box {
     display: flex;
+    gap: 10px;
     margin-top: 10px;
 }
 
 .input-box input {
     flex: 1;
     padding: 10px;
-    border: none;
-    outline: none;
     border-radius: 5px;
+    border: none;
 }
 
 .input-box button {
     padding: 10px;
-    background: #7d2ae8;
     border: none;
-    cursor: pointer;
-    margin-left: 10px;
-    color: #fff;
+    background: purple;
+    color: white;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-/* TikTok Downloader */
+/* TIKTOK DOWNLOADER PAGE */
 .downloader-container {
-    max-width: 600px;
-    margin: 100px auto;
+    max-width: 500px;
+    margin: 50px auto;
     padding: 20px;
-    text-align: center;
+    background: #1a1a1a;
+    border-radius: 10px;
 }
 
 .downloader-container input {
     width: 100%;
     padding: 10px;
-    margin-top: 10px;
-    border: none;
     border-radius: 5px;
+    border: none;
+    margin-top: 10px;
 }
 
 .downloader-container button {
-    background: #7d2ae8;
-    color: #fff;
-    border: none;
+    width: 100%;
     padding: 10px;
     margin-top: 10px;
+    border: none;
+    background: purple;
+    color: white;
     border-radius: 5px;
     cursor: pointer;
-}
-
-/* Animasi Fade-In */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.2em;
-    }
-
-    .profile-pic {
-        width: 120px;
-        height: 120px;
-    }
-
-    .hero h2 {
-        font-size: 2em;
-    }
-
-    .hero p {
-        font-size: 1em;
-    }
-
-    .social-icons img {
-        width: 35px;
-        height: 35px;
-    }
 }
