@@ -1,25 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
+    // Menu Toggle
     const menuToggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
 
-    menuToggle.addEventListener("click", function () {
-        navMenu.classList.toggle("show");
+    menuToggle.addEventListener("click", () => {
+        navMenu.style.right = navMenu.style.right === "0px" ? "-100%" : "0px";
     });
 
-    // Animasi Fade-in saat Scroll
+    // Animasi Fade-In Saat Scroll
     const fadeElements = document.querySelectorAll(".fade-in");
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
+    const scrollHandler = () => {
+        fadeElements.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                el.classList.add("visible");
             }
         });
-    }, {
-        threshold: 0.2
-    });
+    };
 
-    fadeElements.forEach(element => {
-        observer.observe(element);
-    });
+    window.addEventListener("scroll", scrollHandler);
+    scrollHandler(); // Trigger awal saat load
 });
