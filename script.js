@@ -1,24 +1,31 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Menu Toggle
+document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
 
-    menuToggle.addEventListener("click", () => {
-        navMenu.style.right = navMenu.style.right === "0px" ? "-100%" : "0px";
+    menuToggle.addEventListener("click", function () {
+        navMenu.style.display = navMenu.style.display === "block" ? "none" : "block";
     });
 
-    // Animasi Fade-In Saat Scroll
-    const fadeElements = document.querySelectorAll(".fade-in");
+    // Menutup menu saat klik di luar
+    document.addEventListener("click", function (event) {
+        if (!menuToggle.contains(event.target) && !navMenu.contains(event.target)) {
+            navMenu.style.display = "none";
+        }
+    });
 
-    const scrollHandler = () => {
-        fadeElements.forEach((el) => {
+    // Animasi saat scroll
+    const elements = document.querySelectorAll(".hero, .social-icons");
+    
+    function fadeInOnScroll() {
+        elements.forEach((el) => {
             const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 100) {
-                el.classList.add("visible");
+            if (rect.top < window.innerHeight * 0.9) {
+                el.style.opacity = "1";
+                el.style.transform = "translateY(0)";
             }
         });
-    };
+    }
 
-    window.addEventListener("scroll", scrollHandler);
-    scrollHandler(); // Trigger awal saat load
+    window.addEventListener("scroll", fadeInOnScroll);
+    fadeInOnScroll(); // Jalankan saat pertama kali
 });
