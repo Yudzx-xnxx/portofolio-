@@ -1,28 +1,29 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Nunito:wght@300;400;600&display=swap');
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* Global Styles */
+/* Reset dasar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
 }
 
+/* Warna dasar */
 body {
     background-color: #000;
     color: #fff;
-    overflow-x: hidden;
+    text-align: center;
+    font-size: 16px;
 }
 
 /* Header */
-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background: #000;
+    background-color: #000;
     position: fixed;
     width: 100%;
     top: 0;
@@ -30,8 +31,9 @@ header {
     z-index: 1000;
 }
 
-header h1 {
-    font-size: 20px;
+/* Logo */
+.header h1 {
+    font-size: 24px;
     font-weight: bold;
 }
 
@@ -41,226 +43,238 @@ header h1 {
     cursor: pointer;
 }
 
-/* Navigation Menu */
+/* Menu Dropdown */
 .nav-menu {
     position: absolute;
     top: 60px;
     right: 20px;
     background: rgba(20, 20, 20, 0.95);
-    padding: 15px;
-    border-radius: 5px;
+    border-radius: 8px;
+    padding: 10px 15px;
     display: none;
-    flex-direction: column;
-    min-width: 180px;
+    text-align: left;
+    z-index: 1001;
 }
 
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 12px 0;
-    transition: 0.3s;
-    text-align: center;
+.nav-menu.active {
     display: block;
 }
 
+.nav-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 0;
+    font-size: 18px;
+}
+
 .nav-menu a:hover {
-    color: #9b59b6;
+    color: #a855f7;
 }
 
-/* Hero Section */
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* Profil */
+.profile-container {
+    margin-top: 100px;
     text-align: center;
-    height: 100vh;
 }
 
-.hero img {
-    width: 150px;
-    height: 150px;
+.profile-container img {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 3px solid #9b59b6;
+    border: 3px solid #a855f7;
     margin-bottom: 10px;
 }
 
-.hero h1 {
+/* Nama */
+.profile-container h2 {
     font-size: 28px;
     font-weight: bold;
-    color: #9b59b6;
+    color: #a855f7;
 }
 
-.hero p {
+/* Deskripsi */
+.profile-container p {
     font-size: 16px;
-    max-width: 400px;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
-/* Social Media Icons */
+/* Ikon Sosial Media */
 .social-icons {
     display: flex;
-    gap: 15px;
+    justify-content: center;
     margin-top: 15px;
 }
 
-.social-icons a img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
+.social-icons a {
+    margin: 0 10px;
 }
 
-.social-icons a img:hover {
-    transform: scale(1.1);
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Animasi Scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* About Section */
-.about {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.about h2 {
-    font-size: 28px;
-    color: #9b59b6;
-    margin-bottom: 15px;
-}
-
-.about p {
-    max-width: 600px;
-    margin: auto;
-    font-size: 16px;
-}
-
-/* Skills Section */
-.skills {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.skills h2 {
-    font-size: 28px;
-    color: #9b59b6;
-    margin-bottom: 20px;
-}
-
-.skill-icons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.skill-icons img {
-    width: 50px;
-    height: 50px;
-}
-
-/* Chat AI Section */
-.chat-ai {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.chat-ai h2 {
-    font-size: 28px;
-    color: #9b59b6;
-    margin-bottom: 15px;
-}
-
-.chat-box {
-    max-width: 400px;
-    margin: auto;
-    background: #111;
-    padding: 15px;
-    border-radius: 10px;
-    min-height: 300px;
-}
-
-/* TikTok Downloader */
-.tiktok-downloader {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.tiktok-downloader h2 {
-    font-size: 28px;
-    color: #9b59b6;
-    margin-bottom: 15px;
-}
-
-.download-input {
+.about-section {
     width: 90%;
-    max-width: 400px;
-    padding: 10px;
-    border: 1px solid #9b59b6;
-    border-radius: 5px;
-    background: #222;
-    color: white;
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.about-section h2 {
+    color: #a855f7;
+    font-size: 26px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-.download-btn {
-    background: #9b59b6;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+.about-section p {
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-.download-btn:hover {
-    background: #8e44ad;
-}
-
-/* Footer */
-footer {
+/* Skills Section */
+.skills-section {
+    margin: 80px auto;
     text-align: center;
-    padding: 15px;
+}
+
+.skills-section h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #a855f7;
+    margin-bottom: 20px;
+}
+
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-icons img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+/* Chat AI (Shiina) */
+.chat-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
     background: #111;
-    color: #ccc;
+    border-radius: 8px;
+}
+
+.chat-box {
+    height: 400px;
+    overflow-y: auto;
+    border: 2px solid #a855f7;
+    padding: 15px;
+    border-radius: 8px;
+    background: #222;
+}
+
+.chat-message {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.user-message {
+    background: #a855f7;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background: #444;
+    align-self: flex-start;
+}
+
+.typing-indicator {
     font-size: 14px;
+    color: #a855f7;
 }
 
-/* Animations */
-.fade-in {
-    animation: fadeIn 0.8s ease-in-out;
+/* TikTok Downloader */
+.downloader-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #111;
+    border-radius: 8px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.downloader-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #a855f7;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
 }
 
-/* Responsive */
+.downloader-container button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #a855f7;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.downloader-container button:hover {
+    background: #8a2be2;
+}
+
+/* Responsif */
 @media (max-width: 768px) {
     .nav-menu {
-        min-width: 150px;
-        top: 55px;
+        top: 50px;
+        right: 10px;
     }
-
-    .hero h1 {
+    
+    .nav-menu a {
+        font-size: 16px;
+    }
+    
+    .profile-container h2 {
         font-size: 24px;
     }
 
-    .hero p {
+    .profile-container p {
         font-size: 14px;
     }
 
-    .social-icons a img {
-        width: 25px;
-        height: 25px;
+    .about-section,
+    .skills-section,
+    .chat-container,
+    .downloader-container {
+        width: 95%;
     }
-
-    .skill-icons img {
-        width: 40px;
-        height: 40px;
     }
-}
