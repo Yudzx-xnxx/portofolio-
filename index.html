@@ -5,39 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yudzx Dev</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
         <h1>YUDZX DEV</h1>
-        <button id="menu-btn">☰</button>
+        <div id="menu-toggle" onclick="toggleMenu()">☰</div>
     </header>
 
-    <nav id="menu">
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="chat-ai.html">Chat AI</a>
-        <a href="tiktok-downloader.html">TikTok Downloader</a>
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="chat-ai.html">Chat AI</a></li>
+            <li><a href="tiktok-downloader.html">TikTok Downloader</a></li>
+        </ul>
     </nav>
 
     <section class="hero">
-        <div class="logo-container">
-            <img src="https://files.catbox.moe/your-logo.png" alt="Logo">
-        </div>
+        <img src="https://files.catbox.moe/your-profile-image.png" alt="Profile Picture" class="profile-pic">
         <h2>Yudzx Dev</h2>
-        <p>Developer Without Teacher</p>
-        <p>Currently I am in 9th grade and I am learning coding using YouTube, Github, Chat Ai. At first I was just curious but now it has become my hobby.</p>
+        <p>FullStack Developer</p>
+        <p>Crafting elegant solutions through code. Specialized in full-stack development with a passion for creating seamless user experiences.</p>
 
         <div class="social-icons">
-            <a href="https://github.com/Yudzx-xnxx" target="_blank">
-                <img sDeveloper Without Teacherrc="https://files.catbox.moe/2kdhlu.png" alt="GitHub">
-            </a>
-            <a href="https://www.instagram.com/yudzsenpai_" target="_blank">
-                <img src="https://files.catbox.moe/z40o27.png" alt="Instagram">
-            </a>
-            <a href="https://wa.me/6287760942535" target="_blank">
-                <img src="https://files.catbox.moe/0tdcnc.png" alt="WhatsApp">
-            </a>
+            <a href="https://github.com/Yudzx-xnxx"><img src="https://files.catbox.moe/2kdhlu.png" alt="GitHub"></a>
+            <a href="https://instagram.com/yudzsenpai_"><img src="https://files.catbox.moe/z40o27.png" alt="Instagram"></a>
+            <a href="https://wa.me/6287760942535"><img src="https://files.catbox.moe/0tdcnc.png" alt="WhatsApp"></a>
         </div>
     </section>
 </body>
