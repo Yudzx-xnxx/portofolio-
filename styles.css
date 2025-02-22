@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Nunito:wght@300;400;600&display=swap');
 
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,259 +11,256 @@
 }
 
 body {
-    background-color: #0d0d0d;
-    color: white;
-    text-align: center;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
 }
 
-/* HEADER */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: black;
+    padding: 15px 20px;
+    background: #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-h1 {
-    font-size: 24px;
+header h1 {
+    font-size: 20px;
     font-weight: bold;
 }
 
-#menu-toggle {
-    font-size: 24px;
+/* Menu Icon */
+.menu-icon {
+    font-size: 30px;
     cursor: pointer;
 }
 
-/* NAVIGATION */
-#menu-toggle {
-    background: black;
-    padding: 10px;
-    border-radius: 5px;
-}
-nav {
-    display: none;
+/* Navigation Menu */
+.nav-menu {
     position: absolute;
     top: 60px;
     right: 20px;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 10px;
+    background: rgba(20, 20, 20, 0.95);
+    padding: 15px;
     border-radius: 5px;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    margin: 10px 0;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-.nav-menu {
-    width: 200px; /* Atur sesuai kebutuhan */
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.9); /* Supaya lebih jelas */
-    border-radius: 8px;
-    position: absolute;
-    right: 10px;
-    top: 60px; /* Atur jarak dari tombol menu */
-    z-index: 100;
+    display: none;
+    flex-direction: column;
+    min-width: 180px;
 }
 
 .nav-menu a {
-    display: block;
-    padding: 10px;
     color: white;
     text-decoration: none;
+    font-size: 16px;
+    padding: 12px 0;
+    transition: 0.3s;
+    text-align: center;
+    display: block;
 }
 
 .nav-menu a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    color: #9b59b6;
 }
 
-/* HERO SECTION */
+/* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 20px;
-    animation: fadeIn 1.5s ease-in-out;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
 }
 
-.profile-pic {
+.hero img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 4px solid purple;
-    animation: slideUp 1s ease-in-out;
+    border: 3px solid #9b59b6;
+    margin-bottom: 10px;
 }
 
-h2 {
-    font-size: 32px;
-    color: #a14cff;
-    margin-top: 10px;
-    animation: fadeIn 2s ease-in-out;
+.hero h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #9b59b6;
 }
 
-p {
+.hero p {
     font-size: 16px;
-    max-width: 600px;
-    margin: 10px 0;
-    animation: fadeIn 2.5s ease-in-out;
+    max-width: 400px;
 }
 
-/* SOCIAL ICONS */
+/* Social Media Icons */
 .social-icons {
     display: flex;
     gap: 15px;
-    margin-top: 20px;
-    animation: fadeIn 3s ease-in-out;
+    margin-top: 15px;
 }
 
 .social-icons a img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
 }
 
 .social-icons a img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
-/* ANIMATIONS */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* About Section */
+.about {
+    padding: 80px 20px;
+    text-align: center;
 }
 
-@keyframes slideUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* ABOUT PAGE */
-.about-container {
-    padding: 50px 20px;
-}
-
-.about-container h2 {
+.about h2 {
     font-size: 28px;
-    color: #a14cff;
+    color: #9b59b6;
+    margin-bottom: 15px;
 }
 
-.about-container p {
+.about p {
+    max-width: 600px;
+    margin: auto;
     font-size: 16px;
-    max-width: 700px;
-    margin: 20px auto;
 }
 
-/* SKILLS PAGE */
-.skills-container {
-    padding: 50px 20px;
+/* Skills Section */
+.skills {
+    padding: 80px 20px;
+    text-align: center;
 }
 
-.skills-container h2 {
+.skills h2 {
     font-size: 28px;
-    color: #a14cff;
+    color: #9b59b6;
+    margin-bottom: 20px;
 }
 
-.skills-list {
+.skill-icons {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.skills-list img {
+.skill-icons img {
     width: 50px;
     height: 50px;
-    transition: transform 0.3s;
 }
 
-.skills-list img:hover {
-    transform: scale(1.2);
+/* Chat AI Section */
+.chat-ai {
+    padding: 80px 20px;
+    text-align: center;
 }
 
-/* CHAT AI PAGE */
-.chat-container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #1a1a1a;
-    border-radius: 10px;
+.chat-ai h2 {
+    font-size: 28px;
+    color: #9b59b6;
+    margin-bottom: 15px;
 }
 
 .chat-box {
-    height: 400px;
-    overflow-y: auto;
-    padding: 10px;
-    border-radius: 5px;
-    background: black;
-}
-
-.input-box {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.input-box input {
-    flex: 1;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-.input-box button {
-    padding: 10px;
-    border: none;
-    background: purple;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* TIKTOK DOWNLOADER PAGE */
-.downloader-container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #1a1a1a;
+    max-width: 400px;
+    margin: auto;
+    background: #111;
+    padding: 15px;
     border-radius: 10px;
+    min-height: 300px;
 }
 
-.downloader-container input {
-    width: 100%;
+/* TikTok Downloader */
+.tiktok-downloader {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.tiktok-downloader h2 {
+    font-size: 28px;
+    color: #9b59b6;
+    margin-bottom: 15px;
+}
+
+.download-input {
+    width: 90%;
+    max-width: 400px;
     padding: 10px;
+    border: 1px solid #9b59b6;
     border-radius: 5px;
-    border: none;
-    margin-top: 10px;
+    background: #222;
+    color: white;
+    margin-bottom: 10px;
 }
 
-.downloader-container button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    background: purple;
+.download-btn {
+    background: #9b59b6;
     color: white;
+    border: none;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: #8e44ad;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #111;
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        min-width: 150px;
+        top: 55px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .social-icons a img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .skill-icons img {
+        width: 40px;
+        height: 40px;
+    }
 }
